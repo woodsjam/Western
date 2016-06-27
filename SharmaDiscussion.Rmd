@@ -1,5 +1,5 @@
 ---
-title: "Discussion of 'Offers of Appointments with Nurse Practitioners'" 
+title: "Discussion of 'Offers of Appointments with Nurse Practitioners' and 'Access to Primary Care Physicians: Results from a National Audit Study'" 
 author: "James Woods"
 date: "July 2, 2016"
 output: 
@@ -53,10 +53,10 @@ Decide if you want to use P(Race|Name) or P(Name|Race).
 
 ## Number of Nurse Pracitioner Observations
 
-**Problem**: You can only make those statmenets if the model is correct and those observations are exchangeble with the others, same correlations, same error distibution, parallel movement in other parameters. 
+**Problem**: You can only make those statements if the model is correct and those observations are exchangeable with the others, same correlations, same error distribution, parallel movement in other parameters. 
 
 + None can be verified or argued with the number of observations
-+ Not even enough to test via bootstrap or jacknife.
++ Not even enough to test via bootstrap or jackknife.
 
 **Recomend**: 
 
