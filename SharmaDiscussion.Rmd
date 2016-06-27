@@ -1,0 +1,65 @@
+---
+title: "Discussion of 'Offers of Appointments with Nurse Practitioners'" 
+author: "James Woods"
+date: "July 2, 2016"
+output: 
+  beamer_presentation: 
+    theme: Hannover
+
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Design Issues
+
+**Problem**: The use of fixed names to signal ethnicity
+
+  + Unclear if one or more names were used to signal race/ethnicity/gender combination.
+  + Bertrand, M., & Mullainathan, S. (2004) used different names by state.
+  + Lavender, A. D. (1988) found differences by city for categorization of names as Spanish, bicultural or English.
+  + The name choice may be a strong indicator in one city but not in another.
+    
+**Recomend**: (with a hint from Bertrand, M., & Mullainathan, S. (2004)) Include fraction of people with that name that identify as the desired ethnicity/race combination in the analysis.
+Decide if you want to use P(Race|Name) or P(Name|Race).
+
+## Additional Validation Experiment
+
+**Problem**: Not all calls resulted in either an offer of appointment or not.
+
+  + Non-response could be important, e.g., *small* practices were censored and only *larger* practices included.
+
+**Recomend**: Show that the treatments are still randomized over the observed sample. 
+
+## Econometric Technique
+
+**Problem**: Wait till appointment is contingent on appointment being offered
+
+  + OLS, or simple transformed averages, is inconsistent
+  + Effects of ethnicity, insurance, etc.,  is understated
+  + Baseline wait is overstated
+    
+**Recomend**: System estimation with multinomial probit/tobit on appointment offer: requested phy, other phy, PA, NP, none.  Time till appointment is separate equation. 
+
+## Included Variables
+
+**Problem**: If patient name can indicate ethnicity, physician name can too.
+  
+**Recomend**: Include probability that physicians surname self identifies as one of the controlled ethnicity/race combinations.
+  
+**Unrelated Recomendation**: Number of calls required for response.  I bet it is correlated with long waits for an appointment.
+
+## Number of Nurse Pracitioner Observations
+
+**Problem**: You can only make those statmenets if the model is correct and those observations are exchangeble with the others, same correlations, same error distibution, parallel movement in other parameters. 
+
++ None can be verified or argued with the number of observations
++ Not even enough to test via bootstrap or jacknife.
+
+**Recomend**: 
+
++ Drop this issue or 
++ Switch to Bayesian or
++ Propose a new grant funded study based on this tantalizing observation.
